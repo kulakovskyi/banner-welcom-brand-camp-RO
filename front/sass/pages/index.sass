@@ -1,0 +1,134 @@
+$blue: #000055
+$magenta: #ff267e
+$green: #05C489
+$green-hover: #09B47F
+$grey: #EDEDED
+$text: #292929
+
+$font-suisse-bold: SuisseIntl-Bold, sans-serif //700
+$font-suisse-reg: SuisseIntl-Regular, sans-serif //400
+$font-suisse-semb: SuisseIntl-SemiBold, sans-serif //600 //
+$font-wulkan: WulkanDisplay, sans-serif //
+
+body
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  overscroll-behavior: none
+  background: black
+  img
+    max-width: 100%
+    height: auto
+
+
+.banner
+  overflow: hidden
+  padding: 8% 0 11%
+  background: $blue
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  &__img
+    &-left
+      position: absolute
+      top: 0
+      left: 0
+      width: 50%
+      height: 100%
+      background: url("../img/img-left-desc.jpg") no-repeat 50% 0/contain
+
+    &-right
+      position: absolute
+      top: 0
+      right: 0
+      width: 50%
+      height: 100%
+      z-index: 2
+      background: url("../img/img-right-desc.jpg") no-repeat 50% 0/contain
+  &__info
+    position: relative
+    z-index: 3
+    display: flex
+    flex-direction: column
+    align-items: center
+    transform: scale(1.2)
+    &-title
+      text-align: center
+      font-family: $font-suisse-semb
+      margin: 0 0 20px 0
+      font-size: 56px
+      line-height: 68px
+      letter-spacing: 0.03em
+      text-transform: uppercase
+      font-feature-settings: 'pnum' on, 'lnum' on
+      color: $grey
+      span
+        font-family: $font-wulkan
+        color: $magenta
+    &-list
+      display: flex
+      align-items: center
+      margin: 0 0 30px 0
+    &-item
+      font-family: $font-suisse-semb
+      font-size: 18px
+      line-height: 23px
+      text-align: center
+      letter-spacing: 0.03em
+      text-transform: uppercase
+      font-feature-settings: 'pnum' on, 'lnum' on
+      color: $grey
+      &:not(:last-child)
+        margin: 0 18px 0 0
+    &-btn
+      font-family: $font-suisse-semb
+      display: inline-block
+      font-size: 17px
+      line-height: 22px
+      padding: 18px 35px 16px
+      letter-spacing: 0.08em
+      text-transform: uppercase
+      border-radius: 2.6653px
+      color: $blue
+      background: $green
+      transition: background-color .3s ease
+      &:hover
+        background: $green-hover
+
+  &__marquee
+    padding: 14px 0 14px 40px
+    background: $magenta
+    min-width: 100%
+    position: absolute
+    bottom: 0
+    left: 0
+    z-index: 4
+    display: flex
+    align-items: center
+    &-list
+      margin: 0 18px 0 0
+      display: flex
+      align-items: center
+
+    &-item
+      font-family: $font-suisse-semb
+      font-size: 20px
+      line-height: 26px
+      text-align: center
+      letter-spacing: 0.03em
+      text-transform: uppercase
+      font-feature-settings: 'pnum' on, 'lnum' on
+      color: $grey
+      white-space: nowrap
+      &:not(:last-child)
+        margin: 0 20px 0 0
+      &:nth-child(2)
+        min-width: 40px
+        img
+          margin-top: 7px
+    &-fav
+      margin: 0 18px 0 0
+      min-width: 40px
+      height: 30px
+      background: url("../img/fav.svg") no-repeat 50% 0/contain
+
+

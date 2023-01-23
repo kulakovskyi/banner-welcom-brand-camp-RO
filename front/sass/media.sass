@@ -89,26 +89,9 @@
 @media screen and (max-width: 500px)
   .banner
     justify-content: stretch
-    padding: 64% 15px 80px
+    padding: 75% 15px 30px
     &__marquee
-      padding: 13px 0
-      justify-content: center
-      &-list
-        display: none
-        &:nth-child(1)
-          display: flex
-          justify-content: center
-          margin: 0
-      &-item
-        font-size: 16px
-        line-height: 19px
-        &:not(:last-child)
-          margin: 0 20px 0 0
-        &:nth-child(2)
-          min-width: 20px
-          max-width: 35px
-          img
-            margin: 0
+      display: none
       &-fav
         background: none
         display: none
@@ -126,6 +109,11 @@
         &:nth-child(2)
           min-width: 35px
           max-width: 35px
+
+@media screen and (max-width: 420px)
+  .banner
+    justify-content: stretch
+    padding: 68% 15px 30px
 
 @media screen and (max-width: 365px)
   .banner
